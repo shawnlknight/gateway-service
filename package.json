@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "dev": "tsnd --no-notify --respawn --transpile-only -- src/index",
     "start": "npm run build && node dist/index",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,9 +14,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@graphql-tools/load": "^7.4.0",
     "@graphql-tools/schema": "^8.3.0",
     "@graphql-tools/stitch": "^8.4.0",
-    "@graphql-tools/wrap": "^8.2.0",
+    "@graphql-tools/url-loader": "^7.3.0",
+    "cross-fetch": "^3.1.4",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.6.1",
